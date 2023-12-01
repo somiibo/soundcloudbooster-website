@@ -1,0 +1,28 @@
+{
+  "environment": "production",
+  "repo": {
+    "user": "somiibo",
+    "name": "soundcloudbooster-website"
+  },
+  "npm-build": {
+    "timestamp": "2023-12-01T08:51:54.271Z"
+  },
+  "gh-pages-push": {
+    "timestamp": "%GHP_TIMESTAMP%"
+  },
+  "packages": {
+    "web-manager": "3.2.20"
+  },
+  "brand": {
+    "name": "SoundCloud Booster",
+    "type": "Corporation",
+    "description": "Automate your SoundCloud activity with this free like bot, follow bot & play bot. SoundCloudBooster is a follow bot and play generator all in one. Increase SoundCloud followers & plays for free!",
+    "logo-image": "https://cdn.itwcreativeworks.com/assets/somiibo/images/logo/somiibo-brandmark-blue-1024x1024.png",
+    "logo-image-svg": "https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-x.svg",
+    "address-locality": "Los Angeles",
+    "address-country": "United States"
+  },
+  "admin-dashboard": {
+    "pages": []
+  }
+}
