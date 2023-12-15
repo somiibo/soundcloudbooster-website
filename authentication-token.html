@@ -76,7 +76,7 @@
       app: 'somiibo',
       version: '1.0.0',
       url: 'https://soundcloudbooster.com',
-      cacheBreaker: '1701607580',
+      cacheBreaker: '1702646502',
       settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyA3-YBkywbzpstijvMqUwn_a0GQTi3EZQc', authDomain: 'somiibo.com', databaseURL: 'https://somiibo-91d13.firebaseio.com', projectId: 'somiibo-91d13', storageBucket: 'somiibo-91d13.appspot.com', messagingSenderId: '605660972329', appId: '1:605660972329:web:4860b3b7afb8591f', measurementId: 'G-PM3ZKCHLMS', }, }, firebase_appCheck: { enabled: false, config: { siteKey: '6LddIDsoAAAAAIlymzmJuwr9Ktz7vS7e0LLxY4kd', }, }, cookieconsent: { enabled: true, config: { palette: { popup: { background: '#1fb7f2', text: '#fff', }, button: { background: '#fff', text: '#1fb7f2', }, }, }, }, chatsy: { enabled: true, config: { accountId: '98WVIFYdGrUbjL4jgyXLPe8ICFt1', chatId: 'NcEywcnfLMs1cB', settings: { openChatButton: { background: '#1fb7f2', text: '#fff', }, }, }, }, sentry: { enabled: true, config: { dsn: '', release: 'ultimate-jekyll-website', replaysSessionSampleRate: 0.1, replaysOnErrorSampleRate: 1.0, }, }, }, exitPopup: { enabled: true, config: { timeout: 1000 * 60 * 60 * 4, handler: null, title: 'Special Offer!', message: 'Get 15% off your purchase of our <strong>Premium plans</strong>. <br><br> Get access to all features and unlimited usage.', okButton: { text: 'Claim 15% Discount', link: '/pricing?utm_source=exit-popup&utm_medium=popup&utm_campaign={pathname}', }, }, }, } ,
       brand: {
         name: 'SoundCloud Booster',
@@ -110,13 +110,13 @@
   };
 </script>
 
-<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/apple-touch-icon.png?cb=1701607580">
-<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon-32x32.png?cb=1701607580">
-<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon-16x16.png?cb=1701607580">
+<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/apple-touch-icon.png?cb=1702646502">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon-32x32.png?cb=1702646502">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon-16x16.png?cb=1702646502">
 <link rel="mask-icon" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon.ico?cb=1701607580">
+<link rel="shortcut icon" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon.ico?cb=1702646502">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/browserconfig.xml?cb=1701607580">
+<meta name="msapplication-config" content="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/browserconfig.xml?cb=1702646502">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS - Defaults-->
@@ -376,7 +376,7 @@ footer, header, hgroup, menu, nav, section {
 
 <!-- Style - IE 8 and Below Only -->
 <!--[if lte IE 8]>
-<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie8.css?cb=1701607580">
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie8.css?cb=1702646502">
 <![endif]-->
 
 <!-- App - Head Content -->
@@ -419,7 +419,7 @@ footer, header, hgroup, menu, nav, section {
   <!-- Content -->
   <div class="container py-5 py-sm-7">
     <a class="d-flex justify-content-center mb-3 animation-slide-up" href="https://soundcloudbooster.com" target="_blank">
-      <img class="zi-2" id="main-logo" src="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-x.svg?cb=1701607580" alt="SoundCloud Booster" style="width: 8rem;">
+      <img class="zi-2" id="main-logo" src="https://cdn.itwcreativeworks.com/assets/itw-creative-works/images/logo/itw-creative-works-brandmark-black-x.svg?cb=1702646502" alt="SoundCloud Booster" style="width: 8rem;">
     </a>
 
     <div class="mx-auto animation-slide-up" style="max-width: 30rem;">
@@ -537,6 +537,7 @@ footer, header, hgroup, menu, nav, section {
 
 <script type="text/javascript">
   var select;
+  var storage;
   var _;
   var url;
   var serverApiURL;
@@ -550,7 +551,6 @@ footer, header, hgroup, menu, nav, section {
   var qsEmail;
   var qsProvider;
   var qsSignout;
-  var qsIsSignup;
   var qsNewsletter;
   var qsAffiliateCode;
 
@@ -562,6 +562,7 @@ footer, header, hgroup, menu, nav, section {
 
   Manager.auth().ready(function () {
     select = Manager.dom().select;
+    storage = Manager.storage();
     _ = Manager.utilities();
     var user = firebase.auth().currentUser;
     url = new URL(window.location.href);
@@ -578,7 +579,6 @@ footer, header, hgroup, menu, nav, section {
     qsEmail = url.searchParams.get('email') || '';
     qsProvider = url.searchParams.get('provider') || '';
     qsSignout = url.searchParams.get('signout') || '';
-    qsIsSignup = url.searchParams.get('isSignup') || '';
     qsNewsletter = url.searchParams.get('newsletter') || '';
     qsAffiliateCode = url.searchParams.get('affiliateCode') || '';
 
@@ -706,8 +706,10 @@ footer, header, hgroup, menu, nav, section {
 
           firebase.auth().signInWithCustomToken(qsToken)
           .then(function (r) {
-            trackSignupOrSignin();
-            redirect();
+            handleAuthentication()
+            .then(function () {
+              redirect();
+            })
           })
           .catch(function (e) {
             display(e);
@@ -788,23 +790,44 @@ footer, header, hgroup, menu, nav, section {
       });
   })
 
-  function trackSignupOrSignin() {
-    var user = firebase.auth().currentUser;
+  function handleAuthentication() {
+    return new Promise(function(resolve, reject) {
+      var user = firebase.auth().currentUser;
 
-    if (!user || !user.uid) { return; }
+      if (!user || !user.uid) { return resolve(); }
 
-    var trackedSignup = Manager.storage().get('trackedSignup', false);
+      var trackedSignupKey = 'trackedSignup.' + user.uid;
+      var trackedSignup = storage.get(trackedSignupKey, false);
 
-    var now = new Date();
-    var signupDate = new Date(+user.metadata.createdAt);
+      var now = new Date();
+      var signupDate = new Date(+user.metadata.createdAt);
 
-    var accountAgeSeconds = Math.floor((now - signupDate) / 1000);
-    var providerData = _.get(user, 'providerData', []);
-    var providerId = _.get(providerData, Math.max(providerData.length - 1, 0) + '.providerId', 'password');
+      var accountAgeSeconds = Math.floor((now - signupDate) / 1000);
+      var providerData = _.get(user, 'providerData', []);
+      var providerId = _.get(providerData, Math.max(providerData.length - 1, 0) + '.providerId', 'password');
+      var isSignUp = accountAgeSeconds < 30 && !trackedSignup;
 
-    console.log('trackSignupOrSignin():', providerId, accountAgeSeconds, trackedSignup);
+      console.log('handleAuthentication():', providerId, accountAgeSeconds, trackedSignup, isSignUp);
 
-    if (accountAgeSeconds < 30 && !trackedSignup) {
+      // Set the trackedSignup flag
+      storage.set(trackedSignupKey, true);
+
+      // If it's not a sign up, just resolve
+      if (!isSignUp) {
+        // Google Analytics
+        gtag('event', 'login', {
+          method: providerId,
+        });
+
+        // Meta Pixel
+        // ...
+
+        // TikTok Pixel
+        // ...
+
+        return resolve();
+      }
+
       // Google Analytics
       gtag('event', 'sign_up', {
         method: providerId,
@@ -825,21 +848,37 @@ footer, header, hgroup, menu, nav, section {
         currency: 'USD',
         content_type: 'product',
       });
-    } else {
-      // Google Analytics
-      gtag('event', 'login', {
-        method: providerId,
-      });
 
-      // Meta Pixel
-      // ...
+      // Send user:signup request
+      user.getIdToken(false)
+        .then(function(token) {
 
-      // TikTok Pixel
-      // ...
-    }
+          fetch('https://us-central1-' + Manager.properties.options.libraries.firebase_app.config.projectId + '.cloudfunctions.net/bm_api', {
+            method: 'POST',
+            body: JSON.stringify({
+              authenticationToken: token,
+              command: 'user:sign-up',
+              payload: {
+                newsletterSignUp: select('.auth-newsletter-input').getValue(),
+                affiliateCode: storage.get('affiliateCode', ''),
+              },
+            }),
+          })
+          .catch(function (e) {
+            console.error('handleAuthentication(): Error sending user:signup request', e);
+          })
 
-    // Set the trackedSignup flag
-    Manager.storage().set('trackedSignup', true);
+          // We don't need to wait for the fetch to finish
+          setTimeout(function () {
+            return resolve();
+          }, 100);
+        })
+        .catch(function(e) {
+          console.error('handleAuthentication(): Error getting token', e);
+
+          return resolve();
+        });
+    });
   }
 
   function updateLinksWithEmail(email) {
@@ -853,44 +892,8 @@ footer, header, hgroup, menu, nav, section {
     })
   }
 
-  function signUpHandler(token) {
-    return new Promise(function(resolve, reject) {
-      console.log('signUpHandler():', token);
-
-      // If not a signup, resolve
-      if (qsIsSignup !== 'true') {
-        return resolve();
-      }
-
-      // Resolve automatically after 100ms
-      setTimeout(function () {
-        return resolve();
-      }, 100);
-
-      // Make request
-      fetch(serverApiURL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          authenticationToken: token,
-          command: 'user:sign-up',
-          payload: {
-            newsletterSignUp: qsNewsletter === 'true',
-            affiliateCode: qsAffiliateCode,
-          }
-        }),
-      })
-      .then(function () {
-        console.error('signUpHandler(): Complete');
-      })
-      .catch(function (e) {
-        console.error('signUpHandler(): Fail', e);
-      })
-    });
-  }
-
   function redirect(url) {
-    var delay = Manager.storage().get('auth.redirectDelay', 0);
+    var delay = storage.get('auth.redirectDelay', 0);
     url = url || redirectUrl;
 
     console.log('redirect():', delay, url);
@@ -954,7 +957,7 @@ footer, header, hgroup, menu, nav, section {
   }
 
   // function redirect(url) {
-  //   var delay = Manager.storage().get('auth.redirectDelay', 0);
+  //   var delay = storage.get('auth.redirectDelay', 0);
   //   console.log('Redirecting with delay...', delay, url);
   //
   //   if (delay) {
@@ -1013,14 +1016,13 @@ footer, header, hgroup, menu, nav, section {
   function createCustomToken(payload) {
     console.log('createCustomToken():', payload);
 
-    trackSignupOrSignin();
+    handleAuthentication()
+    .then(function () {
 
-    payload.user.getIdToken(true)
-    .then(function (token) {
-      console.log('createCustomToken(): token', token);
+      payload.user.getIdToken(true)
+      .then(function (token) {
+        console.log('createCustomToken(): token', token);
 
-      signUpHandler(token)
-      .then(function () {
         fetch(serverApiURL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -1445,7 +1447,7 @@ footer, header, hgroup, menu, nav, section {
 <!-- JS Global Compulsory  --> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/jquery/dist/jquery.min.js"></script> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!-- JS Implementing Plugins --> <!-- <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/vendor/hs-toggle-password/dist/js/hs-toggle-password.js"></script> -->
 <!-- JS Front --> <script src="https://cdn.itwcreativeworks.com/assets/ultimate-jekyll/vendor/front-admin/v2/js/theme.min.js"></script>
-<!-- ITW CW --> <script type="text/javascript" src="https://soundcloudbooster.com/assets/js/base.js?cb=1701607580" async defer></script><style media="screen">
+<!-- ITW CW --> <script type="text/javascript" src="https://soundcloudbooster.com/assets/js/base.js?cb=1702646502" async defer></script><style media="screen">
   body[data-theme="dark"] #main-logo {
     filter: brightness(0) invert(1);
   }
