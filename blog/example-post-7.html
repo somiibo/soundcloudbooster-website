@@ -75,7 +75,7 @@
       app: 'somiibo',
       version: '1.0.0',
       url: 'https://soundcloudbooster.com',
-      cacheBreaker: '1705289626',
+      cacheBreaker: '1706611042',
       settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyA3-YBkywbzpstijvMqUwn_a0GQTi3EZQc', authDomain: 'somiibo.com', databaseURL: 'https://somiibo-91d13.firebaseio.com', projectId: 'somiibo-91d13', storageBucket: 'somiibo-91d13.appspot.com', messagingSenderId: '605660972329', appId: '1:605660972329:web:4860b3b7afb8591f', measurementId: 'G-PM3ZKCHLMS', }, }, firebase_appCheck: { enabled: false, config: { siteKey: '6LddIDsoAAAAAIlymzmJuwr9Ktz7vS7e0LLxY4kd', }, }, cookieconsent: { enabled: true, config: { palette: { popup: { background: '#1fb7f2', text: '#fff', }, button: { background: '#fff', text: '#1fb7f2', }, }, }, }, chatsy: { enabled: true, config: { accountId: '98WVIFYdGrUbjL4jgyXLPe8ICFt1', chatId: 'NcEywcnfLMs1cB', settings: { openChatButton: { background: '#1fb7f2', text: '#fff', }, }, }, }, sentry: { enabled: true, config: { dsn: '', release: 'ultimate-jekyll-website', replaysSessionSampleRate: 0.1, replaysOnErrorSampleRate: 1.0, }, }, }, exitPopup: { enabled: true, config: { timeout: 1000 * 60 * 60 * 4, handler: null, title: 'Special Offer!', message: 'Get 15% off your purchase of our <strong>Premium plans</strong>. <br><br> Get access to all features and unlimited usage.', okButton: { text: 'Claim 15% Discount', link: '/pricing?utm_source=exit-popup&utm_medium=popup&utm_campaign={pathname}', }, }, }, } ,
       brand: {
         name: 'SoundCloud Booster',
@@ -109,13 +109,13 @@
   };
 </script>
 
-<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/apple-touch-icon.png?cb=1705289626">
-<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon-32x32.png?cb=1705289626">
-<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon-16x16.png?cb=1705289626">
+<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/apple-touch-icon.png?cb=1706611042">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon-32x32.png?cb=1706611042">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon-16x16.png?cb=1706611042">
 <link rel="mask-icon" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon.ico?cb=1705289626">
+<link rel="shortcut icon" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon.ico?cb=1706611042">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/browserconfig.xml?cb=1705289626">
+<meta name="msapplication-config" content="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/browserconfig.xml?cb=1706611042">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS - Defaults-->
@@ -298,13 +298,25 @@ footer, header, hgroup, menu, nav, section {
   /* Alert box */
   .master-alert {
     padding: 20px;
-    background-color: #f44336;
     color: white;
-    bottom:0;
-    left:0;
-    position:fixed;
-    z-index:9999;
+    left: 0;
+    z-index: 999999;
     width: 100%;
+  }
+
+  .master-alert-top {
+    top: 0;
+  }
+
+  .master-alert-bottom {
+    bottom: 0;
+  }
+
+  .master-alert-fixed {
+    position: fixed;
+  }
+
+  .master-alert-block {
   }
 
   .master-alert a {
@@ -331,7 +343,15 @@ footer, header, hgroup, menu, nav, section {
   }
 
   .master-alert-outdated {
-    display: none;
+    background-color: #f44336;
+  }
+
+  .master-alert-suspended {
+    background-color: #f44336;
+  }
+
+  .master-alert-sale {
+    background-color: #0d6efd;
   }
 
   /* Chat box opener */
@@ -379,10 +399,53 @@ footer, header, hgroup, menu, nav, section {
   }
 </style>
 
-<!-- Style - IE 8 and Below Only -->
-<!--[if lte IE 8]>
-<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie8.css?cb=1705289626">
+<!-- Style - IE 9 and Below Only -->
+<!--[if lte IE 9]>
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1706611042">
 <![endif]-->
+
+<!-- Style - Scripts are Disabled -->
+<noscript>
+  <style media="screen">
+    .master-alert-outdated {
+      display: block !important;
+    }
+  </style>
+</noscript>
+
+<!-- Alerts -->
+<!-- Master - Outdated Alert Box -->
+<div
+  class="master-alert master-alert-top master-alert-fixed master-alert-outdated bg-danger animation-fade-in"
+  role="alert" aria-live="polite" aria-label="Outdated browser"
+  hidden>
+  <span class="master-alert-close">&times;</span>
+  <div>
+    <i class="fa-solid fa-warning fa-bounce me-2"></i>
+    You are using an outdated browser that our site <strong>DOES NOT</strong> support. Please <a href="https://www.google.com/chrome" rel="nofollow" target="_blank">click here</a> to update your browser.
+  </div>
+</div>
+<div
+  class="master-alert master-alert-top master-alert-fixed master-alert-suspended bg-danger animation-fade-in"
+  role="alert" aria-live="polite" aria-label="Payment method issue"
+  hidden>
+  <span class="master-alert-close">&times;</span>
+  <div>
+    <i class="fa-solid fa-warning fa-bounce me-2"></i>
+    There is a <strong>problem with your payment method</strong>. To continue using <strong>SoundCloud Booster</strong>, please <a href="https://soundcloudbooster.com/account#billing" target="_blank">update your payment method</a>.
+  </div>
+</div>
+<div
+  class="master-alert master-alert-top master-alert-fixed master-alert-sale bg-primary animation-fade-in"
+  role="alert" aria-live="polite" aria-label="Flash sale"
+  hidden>
+  <span class="master-alert-close">&times;</span>
+  <div>
+    <i class="fa-solid fa-stopwatch fa-beat  me-2"></i>
+    <strong>FLASH SALE!</strong>
+    Save <strong>15%</strong> at checkout—today only! <a href="https://soundcloudbooster.com/pricing" target="_blank">Claim discount</a>.
+  </div>
+</div>
 
 <!-- App - Head Content -->
 
@@ -557,13 +620,7 @@ footer, header, hgroup, menu, nav, section {
 
     <!-- Foot -->
 
-<!-- Initialize GA --><!-- Initialize Meta --><!-- Initialize TikTok --><!-- Master - Alert Box -->
-<div class="master-alert master-alert-outdated">
-  <span class="master-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
-  You are using an outdated browser that our site <strong>DOES NOT</strong> support. Please <a href="https://www.google.com/chrome" rel="nofollow" target="_blank">click here</a> to update your browser.
-</div>
-
-<!-- Master - Chat Opener -->
+<!-- Initialize GA --><!-- Initialize Meta --><!-- Initialize TikTok --><!-- Master - Chat Opener -->
 <a id="prechat-btn" class="animation-fade-in" href="#" onclick="return false;" style="display: none;">
   <svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 700 700" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs/>
@@ -576,7 +633,7 @@ footer, header, hgroup, menu, nav, section {
   </svg>
 </a>
 
-<!-- Master - Exit Popip -->
+<!-- Master - Exit Popup -->
 <div id="modal-exit-popup" class="modal fade" tabindex="-1" hidden>
   <div class="modal-dialog">
     <div class="modal-content">
@@ -613,7 +670,7 @@ footer, header, hgroup, menu, nav, section {
 
 <!-- Script - Bundle --> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> 
 
-  <script type="text/javascript" src="https://soundcloudbooster.com/assets/js/main.js?cb=1705289626" async></script>
+  <script type="text/javascript" src="https://soundcloudbooster.com/assets/js/main.js?cb=1706611042" async></script>
 
 
 <!-- TODO: FIX THIS -->
@@ -1189,7 +1246,7 @@ window.SocialShareKit = SocialShareKit;
       "description": "This is a sample excerpt for post number 7 ",
       "headline": "Example post number 7",
       "datePublished": "2023-01-07T00:00:00+00:00",
-      "dateModified": "2024-01-15T03:33:46+00:00",
+      "dateModified": "2024-01-30T10:37:22+00:00",
       "author": {
         "@id": "https://soundcloudbooster.com/team/alex#Person"
       },
