@@ -76,8 +76,8 @@
       app: 'somiibo',
       version: '1.0.0',
       url: 'https://soundcloudbooster.com',
-      buildTime: '1712531493',
-      cacheBreaker: '1712531493',
+      buildTime: '1713396632',
+      cacheBreaker: '1713396632',
       settings:  { libraries: { firebase_app: { enabled: true, config: { apiKey: 'AIzaSyA3-YBkywbzpstijvMqUwn_a0GQTi3EZQc', authDomain: 'somiibo.com', databaseURL: 'https://somiibo-91d13.firebaseio.com', projectId: 'somiibo-91d13', storageBucket: 'somiibo-91d13.appspot.com', messagingSenderId: '605660972329', appId: '1:605660972329:web:4860b3b7afb8591f', measurementId: 'G-PM3ZKCHLMS', }, }, firebase_appCheck: { enabled: false, config: { siteKey: '6LddIDsoAAAAAIlymzmJuwr9Ktz7vS7e0LLxY4kd', }, }, cookieconsent: { enabled: true, config: { palette: { popup: { background: '#1fb7f2', text: '#fff', }, button: { background: '#fff', text: '#1fb7f2', }, }, }, }, chatsy: { enabled: true, config: { accountId: '98WVIFYdGrUbjL4jgyXLPe8ICFt1', chatId: 'NcEywcnfLMs1cB', settings: { openChatButton: { background: '#1fb7f2', text: '#fff', }, }, }, }, sentry: { enabled: true, config: { dsn: '', release: 'ultimate-jekyll-website', replaysSessionSampleRate: 0.1, replaysOnErrorSampleRate: 1.0, }, }, }, exitPopup: { enabled: true, config: { timeout: 1000 * 60 * 60 * 4, handler: null, title: 'Special Offer!', message: 'Get 15% off your purchase of our <strong>Premium plans</strong>. <br><br> Get access to all features and unlimited usage.', okButton: { text: 'Claim 15% Discount', link: '/pricing?utm_source=exit-popup&utm_medium=popup&utm_campaign={pathname}', }, }, }, } ,
       brand: {
         name: 'SoundCloud Booster',
@@ -111,13 +111,13 @@
   };
 </script>
 
-<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/apple-touch-icon.png?cb=1712531493">
-<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon-32x32.png?cb=1712531493">
-<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon-16x16.png?cb=1712531493">
+<!-- Favicon --><link rel="apple-touch-icon" sizes="180x180" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/apple-touch-icon.png?cb=1713396632">
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon-32x32.png?cb=1713396632">
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon-16x16.png?cb=1713396632">
 <link rel="mask-icon" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon.ico?cb=1712531493">
+<link rel="shortcut icon" href="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/favicon.ico?cb=1713396632">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/browserconfig.xml?cb=1712531493">
+<meta name="msapplication-config" content="https://cdn.itwcreativeworks.com/assets/somiibo/images/favicon/browserconfig.xml?cb=1713396632">
 <meta name="theme-color" content="#ffffff">
 
 <!-- CSS - Defaults-->
@@ -230,7 +230,7 @@ footer, header, hgroup, menu, nav, section {
 
 
 <!-- CSS - Bundle-->
-  <link rel="stylesheet" type="text/css" href="https://soundcloudbooster.com/assets/css/main.css?cb=1712531493">
+  <link rel="stylesheet" type="text/css" href="https://soundcloudbooster.com/assets/css/main.css?cb=1713396632">
 
 
 <!-- HTML5 Shiv -->
@@ -395,7 +395,7 @@ footer, header, hgroup, menu, nav, section {
 
 <!-- Style - IE 9 and Below Only -->
 <!--[if lte IE 9]>
-<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1712531493">
+<link rel="stylesheet" type="text/css" href="/assets/css/master/lte-ie9.css?cb=1713396632">
 <![endif]-->
 
 <!-- Style - Scripts are Disabled -->
@@ -840,14 +840,14 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/account</li>
+        <li>/authentication/account</li>
         <li>
           <ul>
             <li></li>
           </ul>
         </li>
       </ul><ul>
-        <li>/authentication/account</li>
+        <li>/account</li>
         <li>
           <ul>
             <li></li>
@@ -896,13 +896,6 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/authentication-required</li>
-        <li>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-      </ul><ul>
         <li>/authentication/required</li>
         <li>
           <ul>
@@ -910,7 +903,7 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/authentication-success</li>
+        <li>/authentication-required</li>
         <li>
           <ul>
             <li></li>
@@ -924,7 +917,7 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/authentication-token</li>
+        <li>/authentication-success</li>
         <li>
           <ul>
             <li></li>
@@ -932,6 +925,13 @@ footer, header, hgroup, menu, nav, section {
         </li>
       </ul><ul>
         <li>/authentication/token</li>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul><ul>
+        <li>/authentication-token</li>
         <li>
           <ul>
             <li></li>
@@ -1001,14 +1001,14 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/checkout/confirmation</li>
+        <li>/submission/confirmation</li>
         <li>
           <ul>
             <li></li>
           </ul>
         </li>
       </ul><ul>
-        <li>/submission/confirmation</li>
+        <li>/checkout/confirmation</li>
         <li>
           <ul>
             <li></li>
@@ -1036,14 +1036,14 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/admin/posts/create</li>
+        <li>/admin/notifications/create</li>
         <li>
           <ul>
             <li></li>
           </ul>
         </li>
       </ul><ul>
-        <li>/admin/notifications/create</li>
+        <li>/admin/posts/create</li>
         <li>
           <ul>
             <li></li>
@@ -1134,14 +1134,14 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/forgot</li>
+        <li>/authentication/forgot</li>
         <li>
           <ul>
             <li></li>
           </ul>
         </li>
       </ul><ul>
-        <li>/authentication/forgot</li>
+        <li>/forgot</li>
         <li>
           <ul>
             <li></li>
@@ -1183,13 +1183,6 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/admin/posts</li>
-        <li>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-      </ul><ul>
         <li>/admin/notifications</li>
         <li>
           <ul>
@@ -1198,6 +1191,13 @@ footer, header, hgroup, menu, nav, section {
         </li>
       </ul><ul>
         <li>/admin/users</li>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul><ul>
+        <li>/admin/posts</li>
         <li>
           <ul>
             <li></li>
@@ -1267,14 +1267,14 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/oauth2</li>
+        <li>/authentication/oauth</li>
         <li>
           <ul>
             <li></li>
           </ul>
         </li>
       </ul><ul>
-        <li>/authentication/oauth</li>
+        <li>/oauth2</li>
         <li>
           <ul>
             <li></li>
@@ -1393,13 +1393,6 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/signin</li>
-        <li>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-      </ul><ul>
         <li>/authentication/signin</li>
         <li>
           <ul>
@@ -1407,7 +1400,7 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/signout</li>
+        <li>/signin</li>
         <li>
           <ul>
             <li></li>
@@ -1421,7 +1414,7 @@ footer, header, hgroup, menu, nav, section {
           </ul>
         </li>
       </ul><ul>
-        <li>/signup</li>
+        <li>/signout</li>
         <li>
           <ul>
             <li></li>
@@ -1429,6 +1422,13 @@ footer, header, hgroup, menu, nav, section {
         </li>
       </ul><ul>
         <li>/authentication/signup</li>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul><ul>
+        <li>/signup</li>
         <li>
           <ul>
             <li></li>
@@ -1829,7 +1829,7 @@ footer, header, hgroup, menu, nav, section {
 
 
 <!-- Script - Bundle -->
-  <script type="text/javascript" src="https://soundcloudbooster.com/assets/js/main.js?cb=1712531493" async></script>
+  <script type="text/javascript" src="https://soundcloudbooster.com/assets/js/main.js?cb=1713396632" async></script>
 
 
 <!-- TODO: FIX THIS -->
